@@ -18,6 +18,20 @@ export default function BookingPreview() {
   const [date, setDate] = useState<Date | undefined>(new Date())
   const [selectedTime, setSelectedTime] = useState<string | null>(null)
 
+  const handleCheckAvailability = () => {
+    if (!date || !selectedTime) {
+      alert('Please select both a date and a time.');
+      return;
+    }
+
+    const formattedDate = date.toLocaleDateString();
+    const message = `Hello! I am interested in booking a slot on ${formattedDate} at ${selectedTime}.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="booking" className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background Elements */}
@@ -84,6 +98,7 @@ export default function BookingPreview() {
                   <Button 
                     size="lg" 
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                    onClick={handleCheckAvailability}
                   >
                     Check Availability
                   </Button>

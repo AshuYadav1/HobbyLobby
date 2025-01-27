@@ -7,6 +7,7 @@ import EventsOffers from './components/EventsOffers'
 import GalleryPreview from './components/GalleryPreview'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Testimonials from './components/Testimonial'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <SportsOptions />
         <BookingPreview />
         <EventsOffers />
+        <Testimonials />
         <GalleryPreview />
         <Contact />
       </main>
