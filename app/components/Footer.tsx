@@ -22,13 +22,13 @@ export default function Footer() {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p>123 Sports Avenue, Cityville</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Turf the Hobby Lobby, Chulna Rd, adjacent to Balaji Darshan Society, Chulna Village, Vasai West, Maharashtra 401202</p>
+            <p>Phone:9284017480</p>
             <p>Email: info@hobbylobby.com</p>
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2023 Hobby Lobby. All rights reserved.</p>
+          <p>&copy; 2025 Hobby Lobby. All rights reserved.</p>
         </div>
       </div>
     </footer>
