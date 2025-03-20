@@ -24,7 +24,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p>Turf the Hobby Lobby, Chulna Rd, adjacent to Balaji Darshan Society, Chulna Village, Vasai West, Maharashtra 401202</p>
             <p>Phone:9284017480</p>
-            <p>Email: info@hobbylobby.com</p>
+            <p>Email: turfhobbylobby@gmail.com</p>
           </div>
         </div>
         <div className="mt-8 text-center">
