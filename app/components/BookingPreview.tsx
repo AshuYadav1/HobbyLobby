@@ -27,7 +27,8 @@ export default function BookingPreview() {
     const formattedDate = date.toLocaleDateString();
     const message = `Hello! I am interested in booking a slot on ${formattedDate} at ${selectedTime}.`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+    const whatsappNumber = "+919284017480"
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
