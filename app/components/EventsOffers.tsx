@@ -26,13 +26,13 @@ const events: Event[] = [
   {
     id: 1,
     title: ' Cricket League 2025',
-    date: 'June 1 - August 31, 2023',
-    description: 'Our most successful summer cricket tournament with 24 teams and over 500 participants.',
-    fullDescription: 'The 2023 Summer Cricket League was a massive success, featuring 24 top-tier teams competing across various skill levels. We saw exceptional talent, intense matches, and community spirit throughout the tournament.',
+    date: 'March 30 -2025',
+    description: 'Our most successful summer cricket tournament with 16 teams and over 176 participants.',
+    fullDescription: 'The 2025 Summer Cricket League was a massive success, featuring 24 top-tier teams competing across various skill levels. We saw exceptional talent, intense matches, and community spirit throughout the tournament.',
     icon: Trophy,
     gradient: 'from-blue-500 to-cyan-500',
     tag: 'Tournament',
-    category: 'Past',
+    category: 'Upcoming',
     imageUrl: 'https://i.postimg.cc/CdTMPGgd/dsc5239-1024x684-1024x516-1708090338044-compressed.jpg'
   },
   {
