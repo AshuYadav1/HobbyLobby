@@ -25,15 +25,17 @@ interface Event {
 const events: Event[] = [
   {
     id: 1,
-    title: ' Cricket League 2025',
+    title: '🏏 Hobby Lobby Cricket Tournament 2025 🏆',
     date: 'March 30 -2025',
-    description: 'Our most successful summer cricket tournament with 16 teams and over 176 participants.',
-    fullDescription: 'The 2025 Summer Cricket League was a massive success, featuring 24 top-tier teams competing across various skill levels. We saw exceptional talent, intense matches, and community spirit throughout the tournament.',
+    description: 'Limited slots available – Only 16 teams can participate on a first-come, first-serve basis! Fixtures will be confirmed by March 29th at 10 PM.',
+    fullDescription: '⚡ Tournament Format & Rules:Underarm bowling ✅ 5 overs per innings✅ 1 over powerplay per team (only 2 players on the boundary)✅ 11 players per team✅ Keeper & slip player compulsory✅ All fresh bowlers✅ Umpire’s decision is final – No arguments allowed✅ A new ball for every match; 1 ball per innings in the final✅ Fiber bats are not allowed',
+
+
     icon: Trophy,
     gradient: 'from-blue-500 to-cyan-500',
     tag: 'Tournament',
     category: 'Upcoming',
-    imageUrl: 'https://i.postimg.cc/CdTMPGgd/dsc5239-1024x684-1024x516-1708090338044-compressed.jpg'
+    imageUrl: 'https://i.postimg.cc/GmYhWGK5/Whats-App-Image-2025-03-26-at-2-15-50-PM.jpg'
   },
   {
     id: 2,
@@ -171,25 +173,28 @@ export default function EventsSection() {
                       View Full Details <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>{currentEvent.title}</DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-4">
-                      {currentEvent.imageUrl && (
-                        <img 
-                          src={currentEvent.imageUrl} 
-                          alt={currentEvent.title} 
-                          className="w-full h-48 md:h-64 object-cover rounded-lg"
-                        />
-                      )}
-                      <p className="text-gray-700">{currentEvent.fullDescription}</p>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="h-5 w-5 text-gray-500" />
-                        <span>{currentEvent.date}</span>
-                      </div>
-                    </div>
-                  </DialogContent>
+                  <DialogContent className="max-w-5xl w-full max-h-[90vh] overflow-y-auto">
+  <DialogHeader>
+    <DialogTitle className="text-xl md:text-2xl">{currentEvent.title}</DialogTitle>
+  </DialogHeader>
+  <div className="space-y-6">
+    {currentEvent.imageUrl && (
+      <img 
+        src={currentEvent.imageUrl} 
+        alt={currentEvent.title} 
+        className="w-full h-96 md:h-[1500px] object-cover rounded-lg"
+      />
+    )}
+    <p className="text-gray-700 text-base md:text-lg">{currentEvent.fullDescription}</p>
+    <div className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+      <Calendar className="h-5 w-5 text-gray-500" />
+      <span>{currentEvent.date}</span>
+    </div>
+  </div>
+</DialogContent>
+
+
+
                 </Dialog>
               </CardContent>
             </Card>
