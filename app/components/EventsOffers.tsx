@@ -18,7 +18,7 @@ interface Event {
   icon: React.ElementType
   gradient: string
   tag: string
-  category: 'Past' | 'Upcoming' | 'Ongoing'
+  category: 'Past' | 'Upcoming'
   imageUrl?: string
 }
 
@@ -27,10 +27,8 @@ const events: Event[] = [
     id: 1,
     title: '🏏 Hobby Lobby Cricket Tournament 2025 🏆',
     date: 'March 30 -2025',
-    description: 'Limited slots available – Only 16 teams can participate on a first-come, first-serve basis! Fixtures will be confirmed by March 29th at 10 PM.',
+    description: '3 Slots  available  Book Now– Only 16 teams can participate on a first-come, first-serve basis! Fixtures will be confirmed by March 29th at 10 PM.',
     fullDescription: '⚡ Tournament Format & Rules:Underarm bowling ✅ 5 overs per innings✅ 1 over powerplay per team (only 2 players on the boundary)✅ 11 players per team✅ Keeper & slip player compulsory✅ All fresh bowlers✅ Umpire’s decision is final – No arguments allowed✅ A new ball for every match; 1 ball per innings in the final✅ Fiber bats are not allowed',
-
-
     icon: Trophy,
     gradient: 'from-blue-500 to-cyan-500',
     tag: 'Tournament',
@@ -50,18 +48,6 @@ const events: Event[] = [
     imageUrl: 'https://i.postimg.cc/fbBLzSxg/25102017-fotress-01.jpg'
   },
   {
-    id: 3,
-    title: 'Weekly Night Games ',
-    date: 'Every Friday',
-    description: '50% Off all sports facilities between 8 PM and midnight.',
-    fullDescription: 'Enjoy half-price bookings for all our sports facilities every Friday night. Perfect for after-work sports, casual games, and weekend warm-ups.',
-    icon: Percent,
-    gradient: 'from-orange-500 to-amber-500',
-    tag: 'Ongoing Offer',
-    category: 'Ongoing',
-    imageUrl: 'https://i.postimg.cc/qB98VWB6/Cricket.jpg'
-  },
-  {
     id: 4,
     title: 'volleyball Championship',
     date: 'December 15 - 17, 2024',
@@ -77,7 +63,7 @@ const events: Event[] = [
 
 export default function EventsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [selectedCategory, setSelectedCategory] = useState<'Past' | 'Ongoing' | 'Upcoming'>('Ongoing')
+  const [selectedCategory, setSelectedCategory] = useState<'Past' | 'Upcoming'>('Upcoming')
 
   const filteredEvents = events.filter(event => event.category === selectedCategory)
   const currentEvent = filteredEvents[currentIndex]
@@ -108,7 +94,7 @@ export default function EventsSection() {
 
         {/* Category Selector */}
         <div className="flex justify-center gap-2 md:gap-6 mb-8 md:mb-12">
-          {(['Past', 'Ongoing', 'Upcoming'] as const).map(category => (
+          {(['Past', 'Upcoming'] as const).map(category => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
@@ -174,27 +160,24 @@ export default function EventsSection() {
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-5xl w-full max-h-[90vh] overflow-y-auto">
-  <DialogHeader>
-    <DialogTitle className="text-xl md:text-2xl">{currentEvent.title}</DialogTitle>
-  </DialogHeader>
-  <div className="space-y-6">
-    {currentEvent.imageUrl && (
-      <img 
-        src={currentEvent.imageUrl} 
-        alt={currentEvent.title} 
-        className="w-full h-96 md:h-[1500px] object-cover rounded-lg"
-      />
-    )}
-    <p className="text-gray-700 text-base md:text-lg">{currentEvent.fullDescription}</p>
-    <div className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
-      <Calendar className="h-5 w-5 text-gray-500" />
-      <span>{currentEvent.date}</span>
-    </div>
-  </div>
-</DialogContent>
-
-
-
+                    <DialogHeader>
+                      <DialogTitle className="text-xl md:text-2xl">{currentEvent.title}</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-6">
+                      {currentEvent.imageUrl && (
+                        <img 
+                          src={currentEvent.imageUrl} 
+                          alt={currentEvent.title} 
+                          className="w-full h-96 md:h-[1500px] object-cover rounded-lg"
+                        />
+                      )}
+                      <p className="text-gray-700 text-base md:text-lg">{currentEvent.fullDescription}</p>
+                      <div className="flex items-center gap-2 text-gray-600 text-sm md:text-base">
+                        <Calendar className="h-5 w-5 text-gray-500" />
+                        <span>{currentEvent.date}</span>
+                      </div>
+                    </div>
+                  </DialogContent>
                 </Dialog>
               </CardContent>
             </Card>
