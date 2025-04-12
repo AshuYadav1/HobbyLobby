@@ -32,8 +32,8 @@ const events: Event[] = [
     icon: Trophy,
     gradient: 'from-blue-500 to-cyan-500',
     tag: 'Tournament',
-    category: 'Upcoming',
-    imageUrl: 'https://i.postimg.cc/GmYhWGK5/Whats-App-Image-2025-03-26-at-2-15-50-PM.jpg'
+    category: 'Past',
+    imageUrl: 'https://i.postimg.cc/C1F3y4QY/Whats-App-Image-2025-03-31-at-1-10-21-AM.jpg'
   },
   {
     id: 2,
@@ -50,14 +50,14 @@ const events: Event[] = [
   {
     id: 4,
     title: 'volleyball Championship',
-    date: 'December 15 - 17, 2024',
+    date: 'Comming Soon - 2025',
     description: 'Annual multi-sport championship across cricket, football, and volleyball.',
     fullDescription: 'Our flagship winter sports event bringing together amateur and semi-professional athletes. Cash prizes, professional scouting, and community celebration.',
     icon: Medal,
     gradient: 'from-purple-500 to-pink-500',
     tag: 'Upcoming',
     category: 'Upcoming',
-    imageUrl: 'https://i.postimg.cc/P5HYNZwt/20201023-005619.jpg'
+    imageUrl: 'https://i.postimg.cc/dQ4cRgSB/Whats-App-Image-2025-04-03-at-10-07-28-PM.jpg'
   }
 ]
 

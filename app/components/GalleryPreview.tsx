@@ -6,12 +6,12 @@ import Image from 'next/image'
 import { X } from 'lucide-react'
 
 const images = [
-  'https://i.postimg.cc/5tJjRjJw/ENC-Sports-Turf-Thane-West-10.jpg',
-  'https://i.postimg.cc/KzqzjNMN/MC45-MTcz-MTIw-MCAx-Nj-I5-Mjgy-NTQ4.jpg',
-  'https://i.postimg.cc/qRMqpYzq/Pitch-2.jpg',
-  'https://i.postimg.cc/VNF5Q1s2/synthetic-football-artificial-turf-500x500.webp',
-  'https://i.postimg.cc/MHnGQQ08/turf-flooring-jpgturf.jpg',
-  'https://i.postimg.cc/XN5q4wvw/green-sports-turf-500x500.webp',
+  'https://i.postimg.cc/nVwHhcCf/photo1.jpg',
+  'https://i.postimg.cc/MHmSmqzq/photo2.jpg',
+  'https://i.postimg.cc/T3Z41BX9/photo3.jpg',
+  'https://i.postimg.cc/kgqGVQ0R/photo4.jpg',
+  'https://i.postimg.cc/NjsThvfn/photo5.jpg',
+  'https://i.postimg.cc/nVwHhcCf/photo1.jpg',
 ]
 
 export default function GalleryPreview() {
