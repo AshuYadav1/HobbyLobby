@@ -47,6 +47,22 @@ const events: Event[] = [
     category: 'Past',
     imageUrl: 'https://i.postimg.cc/fbBLzSxg/25102017-fotress-01.jpg'
   },
+
+  {
+    id: 4,
+    title: 'Summer Camp 2025',
+    date: '05/05/2025',
+    description: 'Book your child’s spot in our summer sports camp before May 20 and get 20% off the total fee. Fun games, team activities, and professional coaching await!',
+    fullDescription: 'Terms & Conditions Offer valid only for bookings made before May 20, 2025 ,Applicable to full camp bookings only Limited slots available – first come, first served.',
+
+
+
+    icon: Medal,
+    gradient: 'from-purple-500 to-pink-500',
+    tag: 'Upcoming',
+    category: 'Upcoming',
+    imageUrl: 'https://i.postimg.cc/mg7RKjgB/Hobby-Lobby-4.png'
+  },
   {
     id: 4,
     title: 'volleyball Championship',

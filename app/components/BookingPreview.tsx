@@ -24,6 +24,18 @@ export default function BookingPreview() {
       return;
     }
 
+    // Prevent booking for past dates
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+
+    const selected = new Date(date)
+    selected.setHours(0, 0, 0, 0)
+
+    if (selected < today) {
+      alert('You cannot book a slot for a past date.')
+      return
+    }
+
     const formattedDate = date.toLocaleDateString();
     const message = `Hello! I am interested in booking a slot on ${formattedDate} at ${selectedTime}.`;
     const encodedMessage = encodeURIComponent(message);
@@ -59,8 +71,9 @@ export default function BookingPreview() {
                   <Calendar
                     mode="single"
                     selected={date}
-                    onSelect={setDate}
+                    onSelect={(selected) => setDate(selected ?? new Date())}
                     className="rounded-md border shadow-sm"
+                    disabled={{ before: new Date() }}
                   />
                 </div>
               </div>
@@ -79,6 +92,7 @@ export default function BookingPreview() {
                           ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md transform scale-[1.02]' 
                           : 'bg-gray-50 hover:bg-gray-100 text-gray-700 hover:shadow-sm'
                         }`}
+                      aria-pressed={selectedTime === time}
                     >
                       {time}
                     </button>
